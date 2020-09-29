@@ -1,4 +1,4 @@
-# Challenge
+# How to run
 1) Must have cocoapods to run project
 2) Git checkout and run  `pod install`
 3) Build and run app! :)
