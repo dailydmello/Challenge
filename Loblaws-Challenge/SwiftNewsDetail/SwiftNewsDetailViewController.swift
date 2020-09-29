@@ -16,7 +16,6 @@ class SwiftNewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = K.swiftNewsDetailNavTitle
         updateView()
     }
     
@@ -26,6 +25,7 @@ class SwiftNewsDetailViewController: UIViewController {
                 articleImage.sd_setImage(with: url, placeholderImage: placeholderImage)
             }
             bodyTextLabel.text = viewModel.selftext
+            title = viewModel.title
         }
     }
 }
