@@ -76,7 +76,7 @@ class SwiftNewsDashboardViewController: UIViewController {
     }
     
     private func parseError(error: Error) -> String {
-        // would display friendly message on production and detailed message like below on dev, to help debug
+        // would display friendly error message on production and detailed message like below on dev, to help debug
         var message = ""
         if let redditAPIError = error as? RedditAPIError {
             if let httpCode = redditAPIError.httpCode {
