@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="zpU-dA-gDI">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="U0t-eL-Ohc">
+            <objects>
+                <navigationController id="zpU-dA-gDI" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YYF-cw-zRg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="jq6-qy-K0S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6w-PV-utS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1603" y="135"/>
+        </scene>
+        <!--Swift News Dashboard View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SwiftNewsDashboardViewController" customModule="Loblaws_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kOC-aj-lA5">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kOC-aj-lA5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="AgE-1Z-lUc"/>
+                            <constraint firstItem="kOC-aj-lA5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="GFF-Zz-MEM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kOC-aj-lA5" secondAttribute="trailing" id="tcj-WV-Jjc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kOC-aj-lA5" secondAttribute="bottom" id="uPd-6Z-0Kw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="B5W-wk-F6f"/>
+                    <connections>
+                        <outlet property="tableView" destination="kOC-aj-lA5" id="ccf-MZ-J0d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-749" y="135"/>
+        </scene>
+        <!--Swift News Detail View Controller-->
+        <scene sceneID="cB5-NW-IdQ">
+            <objects>
+                <viewController storyboardIdentifier="SwiftNewsDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="hFi-cA-5wg" customClass="SwiftNewsDetailViewController" customModule="Loblaws_Challenge" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8XM-3p-cXr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-xm-VN9">
+                                <rect key="frame" x="16" y="280" width="382" height="164.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZY2-Va-Tzk" userLabel="Article Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="128"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4nR-gs-eAz" userLabel="Body Label">
+                                        <rect key="frame" x="0.0" y="144" width="382" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0hN-xm-VN9" firstAttribute="leading" secondItem="3NM-V3-MQy" secondAttribute="leading" constant="16" id="IEf-vH-ZjA"/>
+                            <constraint firstItem="0hN-xm-VN9" firstAttribute="top" secondItem="3NM-V3-MQy" secondAttribute="top" constant="16" id="XNc-Ow-ftJ"/>
+                            <constraint firstItem="3NM-V3-MQy" firstAttribute="trailing" secondItem="0hN-xm-VN9" secondAttribute="trailing" constant="16" id="ZHa-Yv-fYN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3NM-V3-MQy"/>
+                    </view>
+                    <connections>
+                        <outlet property="articleImage" destination="ZY2-Va-Tzk" id="emh-RY-gjx"/>
+                        <outlet property="bodyTextLabel" destination="4nR-gs-eAz" id="ARe-y7-AGi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIf-aZ-h8g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="158" y="134"/>
+        </scene>
+    </scenes>
+</document>
